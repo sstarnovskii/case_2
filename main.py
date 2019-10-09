@@ -14,4 +14,4 @@ for month in range(12):
     print('{} {} {}:'.format(lc.QUESTION, name_month[month], lc.CURRENCY, end=''))
     income = float(input())
     annual_income += income
-print(annual_income)
+print(annual_income)  # TODO: remove this "print" later 
