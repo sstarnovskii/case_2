@@ -1,7 +1,7 @@
 # Case-study #2
-# Developers:   Drachev Nikita (25),
-#               Starnovskiy Sergey (),
-#               Zhuravlev Alexander ()
+# Developers:   Drachev Nikita (35),
+#               Starnovskiy Sergey (50),
+#               Zhuravlev Alexander (30)
 import local as lc
 
 social_status = int(input(lc.STATUS))
@@ -11,10 +11,11 @@ name_month = [lc.JAN, lc.FAB, lc.MAR, lc.APR, lc.MAY, lc.JUN, lc.JUL, lc.AUG, lc
 # Calculating annual income.
 annual_income = 0
 for month in range(12):
-    print('{} {} {}:'.format(lc.QUESTION, name_month[month], lc.CURRENCY, end=''))
+    print('{} {} ({} {}):'.format(lc.QUESTION, name_month[month], lc.PREPOSITION, lc.CURRENCY, end=''))
     income = float(input())
     annual_income += income
 tax = 0
+
 # Calculating tax value for each social status and annual revenue.
 if social_status == 1:
     if annual_income <= 9075:
@@ -70,4 +71,5 @@ else:
         tax = 12950*0.1 + 49400*0.15 + 127550*0.25 + 206600*0.28 + 405100*0.33 + \
                                     432200*0.35 + (annual_income - 432200) * 0.396
 
-print(lc.OUTPUT, tax, 'долл. США')
+# Program displays annual tax value with a comment.
+print(lc.OUTPUT, tax, lc.CURRENCY)
