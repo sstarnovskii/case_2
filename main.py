@@ -16,6 +16,7 @@ for month in range(12):
     annual_income += income
 print(annual_income)  # TODO: remove this "print" later
 tax = 0
+# calculating tax value for every stage of revenue
 if social_status == 1:
     if annual_income <= 9075:
         tax = annual_income * 0.1
