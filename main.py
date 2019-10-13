@@ -2,6 +2,8 @@
 # Developers:   Drachev Nikita (35),
 #               Starnovskiy Sergey (50),
 #               Zhuravlev Alexander (30)
+# Program calculates annual tax value for USA citizen based on his social status and annual income. User enters his
+# social status and income for each month and the output is annual tax value rounded to hundredths.
 import local as lc
 
 social_status = int(input(lc.STATUS))
@@ -72,4 +74,4 @@ else:
                                     432200*0.35 + (annual_income - 432200) * 0.396
 
 # Program displays annual tax value with a comment.
-print(lc.OUTPUT, tax, lc.CURRENCY)
+print(lc.OUTPUT, round(tax, 2), lc.CURRENCY)
